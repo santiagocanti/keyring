@@ -160,7 +160,8 @@ func (k *keychain) Set(item Item) error {
 		})
 	}*/
 
-	debugf("Adding service=%q, label=%q, account=%q, trusted=%v to osx keychain %q", k.service, item.Label, item.Key, isTrusted, k.path)
+	//debugf("Adding service=%q, label=%q, account=%q, trusted=%v to osx keychain %q", k.service, item.Label, item.Key, isTrusted, k.path)
+	debugf("Adding service=%q, label=%q, account=%q, trusted=%v to osx keychain %q", k.service, item.Label, item.Key, k.path)
 
 	if err := gokeychain.AddItem(kcItem); err == gokeychain.ErrorDuplicateItem {
 		debugf("Item already exists, updating")
