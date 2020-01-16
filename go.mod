@@ -1,4 +1,4 @@
-module github.com/n11c/keyring
+module github.com/santiagocanti/keyring
 
 go 1.12
 
